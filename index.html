@@ -1,40 +1,56 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0"
-  />
-  <title>Striga Rough Carpentry | Adrian Striga</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Striga Site Carpentry | Adrian Striga</title>
   <meta
     name="description"
-    content="Premium rough carpentry and framing support for residential builds, additions, and renovations across Vancouver and the Lower Mainland."
+    content="Premium one-page website for Adrian Striga — rough carpentry, framing, site leadership, and structural support across Vancouver, Richmond, and the Lower Mainland."
   />
-  <meta name="theme-color" content="#0f1114" />
+  <meta name="theme-color" content="#101216" />
+  <meta property="og:title" content="Striga Site Carpentry | Adrian Striga" />
+  <meta
+    property="og:description"
+    content="Rough carpentry, framing, site leadership, and organized crew support for Lower Mainland projects."
+  />
+  <meta
+    property="og:image"
+    content="https://images.pexels.com/photos/15477575/pexels-photo-15477575.jpeg?auto=compress&cs=tinysrgb&w=1600"
+  />
+  <link
+    rel="icon"
+    href='data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120"><rect width="120" height="120" rx="26" fill="%23101216"/><path d="M34 80L55 31h9l22 49h-12l-4-10H49l-4 10H34zm19-20h13l-6-17-7 17z" fill="%23f2c17e"/></svg>'
+  />
 
   <style>
     @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Manrope:wght@500;700;800&display=swap");
 
     :root {
-      --bg: #0f1114;
-      --bg-elevated: rgba(255, 255, 255, 0.04);
-      --bg-soft: #171a1f;
-      --card: rgba(255, 255, 255, 0.06);
-      --card-strong: rgba(255, 255, 255, 0.09);
-      --text: #f6f4ef;
-      --muted: #b9b5ac;
+      --bg: #101216;
+      --bg-soft: #151922;
+      --bg-elev: rgba(255, 255, 255, 0.05);
+      --bg-elev-2: rgba(255, 255, 255, 0.08);
+      --card: rgba(255, 255, 255, 0.05);
+      --card-2: rgba(255, 255, 255, 0.08);
       --line: rgba(255, 255, 255, 0.1);
-      --accent: #d89a4a;
-      --accent-2: #ffbf72;
-      --accent-dark: #8d5b1f;
-      --success: #8dcf9b;
-      --shadow: 0 24px 80px rgba(0, 0, 0, 0.45);
-      --radius: 24px;
-      --radius-sm: 18px;
-      --radius-xs: 14px;
-      --max: 1180px;
-      --header-h: 82px;
+      --line-strong: rgba(255, 255, 255, 0.16);
+      --text: #f7f3eb;
+      --muted: #b7b0a4;
+      --muted-2: #8e8a82;
+      --accent: #d69747;
+      --accent-2: #f2c17e;
+      --accent-3: #ffdfa8;
+      --success: #9dd39f;
+      --shadow-xl: 0 30px 80px rgba(0, 0, 0, 0.42);
+      --shadow-lg: 0 18px 40px rgba(0, 0, 0, 0.28);
+      --radius-xl: 30px;
+      --radius-lg: 24px;
+      --radius-md: 18px;
+      --radius-sm: 14px;
+      --max: 1220px;
+      --header-h: 84px;
     }
 
     * {
@@ -48,11 +64,11 @@
     body {
       margin: 0;
       font-family: "Inter", sans-serif;
-      background:
-        radial-gradient(circle at top left, rgba(216, 154, 74, 0.18), transparent 28%),
-        radial-gradient(circle at top right, rgba(255, 191, 114, 0.08), transparent 22%),
-        linear-gradient(180deg, #0c0e11 0%, #12151a 48%, #0d0f12 100%);
       color: var(--text);
+      background:
+        radial-gradient(circle at 10% 0%, rgba(214, 151, 71, 0.18), transparent 24%),
+        radial-gradient(circle at 95% 10%, rgba(242, 193, 126, 0.09), transparent 20%),
+        linear-gradient(180deg, #0c0f13 0%, #11151c 50%, #0d1014 100%);
       overflow-x: hidden;
     }
 
@@ -61,10 +77,10 @@
       position: fixed;
       inset: 0;
       background:
-        linear-gradient(rgba(255, 255, 255, 0.028) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255, 255, 255, 0.028) 1px, transparent 1px);
-      background-size: 42px 42px;
-      mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.35), transparent 75%);
+        linear-gradient(rgba(255, 255, 255, 0.026) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.026) 1px, transparent 1px);
+      background-size: 40px 40px;
+      mask-image: linear-gradient(to bottom, rgba(0,0,0,0.6), transparent 78%);
       pointer-events: none;
       z-index: -2;
     }
@@ -74,9 +90,8 @@
       position: fixed;
       inset: 0;
       background:
-        radial-gradient(circle at 20% 20%, rgba(216, 154, 74, 0.14), transparent 18%),
-        radial-gradient(circle at 80% 0%, rgba(255, 191, 114, 0.06), transparent 18%),
-        radial-gradient(circle at 85% 80%, rgba(216, 154, 74, 0.08), transparent 20%);
+        radial-gradient(circle at 22% 18%, rgba(214, 151, 71, 0.1), transparent 16%),
+        radial-gradient(circle at 80% 70%, rgba(214, 151, 71, 0.08), transparent 18%);
       filter: blur(40px);
       pointer-events: none;
       z-index: -1;
@@ -94,7 +109,8 @@
 
     button,
     input,
-    textarea {
+    textarea,
+    select {
       font: inherit;
     }
 
@@ -104,7 +120,7 @@
     }
 
     .section {
-      padding: clamp(72px, 9vw, 120px) 0;
+      padding: clamp(76px, 10vw, 128px) 0;
       position: relative;
     }
 
@@ -112,41 +128,42 @@
       display: inline-flex;
       align-items: center;
       gap: 0.7rem;
-      padding: 0.55rem 0.9rem;
-      border: 1px solid rgba(255, 255, 255, 0.12);
+      padding: 0.56rem 0.9rem;
       border-radius: 999px;
-      color: #f0dfcb;
-      background: rgba(255, 255, 255, 0.035);
-      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255,255,255,0.14);
+      background: rgba(255,255,255,0.045);
+      backdrop-filter: blur(14px);
+      color: #f2dfc2;
       font-size: 0.82rem;
-      font-weight: 600;
+      font-weight: 700;
       letter-spacing: 0.14em;
       text-transform: uppercase;
     }
 
     .eyebrow::before {
       content: "";
-      width: 0.55rem;
-      height: 0.55rem;
-      border-radius: 50%;
+      width: 0.56rem;
+      height: 0.56rem;
+      border-radius: 999px;
       background: linear-gradient(135deg, var(--accent-2), var(--accent));
-      box-shadow: 0 0 18px rgba(255, 191, 114, 0.65);
+      box-shadow: 0 0 18px rgba(242, 193, 126, 0.5);
     }
 
     .section-title {
-      font-family: "Manrope", sans-serif;
-      font-size: clamp(2rem, 4.5vw, 3.6rem);
-      line-height: 0.98;
-      letter-spacing: -0.04em;
       margin: 1rem 0 1rem;
-      max-width: 12ch;
+      font-family: "Manrope", sans-serif;
+      font-size: clamp(2.25rem, 4.8vw, 4rem);
+      line-height: 0.96;
+      letter-spacing: -0.05em;
+      max-width: 11ch;
     }
 
     .section-copy {
+      margin: 0;
+      max-width: 68ch;
       color: var(--muted);
-      max-width: 60ch;
-      line-height: 1.7;
-      font-size: 1.03rem;
+      font-size: 1.04rem;
+      line-height: 1.78;
     }
 
     .btn-row {
@@ -164,9 +181,9 @@
       align-items: center;
       justify-content: center;
       gap: 0.65rem;
-      padding: 0.98rem 1.28rem;
+      padding: 1rem 1.24rem;
       border-radius: 999px;
-      font-weight: 700;
+      font-weight: 800;
       transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease, border-color 0.25s ease;
       white-space: nowrap;
     }
@@ -176,36 +193,36 @@
     }
 
     .btn-primary {
-      color: #101214;
+      color: #101216;
       background: linear-gradient(135deg, var(--accent-2), var(--accent));
-      box-shadow: 0 12px 40px rgba(216, 154, 74, 0.28);
+      box-shadow: 0 14px 40px rgba(214, 151, 71, 0.25);
     }
 
     .btn-secondary {
       color: var(--text);
-      border: 1px solid rgba(255, 255, 255, 0.14);
-      background: rgba(255, 255, 255, 0.04);
-      backdrop-filter: blur(14px);
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.12);
+      backdrop-filter: blur(12px);
     }
 
     .btn-ghost {
-      color: #f3dfc1;
+      color: #f2dfc2;
       background: transparent;
-      border: 1px solid rgba(216, 154, 74, 0.35);
+      border: 1px solid rgba(214, 151, 71, 0.35);
     }
 
     .site-header {
       position: fixed;
       inset: 0 0 auto 0;
-      z-index: 100;
       height: var(--header-h);
-      transition: background 0.28s ease, border-color 0.28s ease, backdrop-filter 0.28s ease;
+      z-index: 120;
+      transition: background 0.24s ease, backdrop-filter 0.24s ease, border-color 0.24s ease;
     }
 
     .site-header.scrolled {
-      background: rgba(10, 12, 15, 0.72);
+      background: rgba(10,12,15,0.74);
       backdrop-filter: blur(18px);
-      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      border-bottom: 1px solid rgba(255,255,255,0.08);
     }
 
     .nav-shell {
@@ -224,19 +241,18 @@
     }
 
     .brand-mark {
-      width: 46px;
-      height: 46px;
-      border-radius: 14px;
+      width: 48px;
+      height: 48px;
+      border-radius: 16px;
       display: grid;
       place-items: center;
-      font-weight: 800;
-      letter-spacing: -0.05em;
-      color: #0f1114;
-      background:
-        linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(255, 191, 114, 0.92)),
-        #fff;
-      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.28);
       flex-shrink: 0;
+      color: #121417;
+      font-weight: 900;
+      letter-spacing: -0.05em;
+      background:
+        linear-gradient(135deg, rgba(255,255,255,0.96), rgba(242,193,126,0.95));
+      box-shadow: 0 14px 34px rgba(0,0,0,0.25);
     }
 
     .brand-copy {
@@ -246,7 +262,7 @@
     .brand-copy strong {
       display: block;
       font-family: "Manrope", sans-serif;
-      font-size: 0.97rem;
+      font-size: 0.98rem;
       letter-spacing: 0.02em;
     }
 
@@ -254,33 +270,33 @@
       display: block;
       color: var(--muted);
       font-size: 0.8rem;
-      margin-top: 0.1rem;
+      margin-top: 0.08rem;
     }
 
     .nav-links {
       display: flex;
       align-items: center;
-      gap: 1.25rem;
+      gap: 1.2rem;
     }
 
     .nav-links a {
-      color: #ddd8cf;
+      position: relative;
+      color: #ddd7ce;
       font-size: 0.95rem;
       font-weight: 600;
-      position: relative;
     }
 
     .nav-links a::after {
       content: "";
       position: absolute;
       left: 0;
-      bottom: -0.3rem;
+      bottom: -0.35rem;
       width: 100%;
       height: 2px;
       background: linear-gradient(90deg, var(--accent), var(--accent-2));
       transform: scaleX(0);
       transform-origin: left;
-      transition: transform 0.25s ease;
+      transition: transform 0.22s ease;
     }
 
     .nav-links a:hover::after,
@@ -299,9 +315,9 @@
       width: 48px;
       height: 48px;
       border-radius: 14px;
-      border: 1px solid rgba(255, 255, 255, 0.14);
-      background: rgba(255, 255, 255, 0.04);
       color: var(--text);
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.12);
       cursor: pointer;
     }
 
@@ -311,11 +327,11 @@
     }
 
     .hero {
-      position: relative;
       min-height: 100svh;
       display: flex;
       align-items: center;
-      padding: calc(var(--header-h) + 2rem) 0 4rem;
+      position: relative;
+      padding: calc(var(--header-h) + 2.5rem) 0 4rem;
       isolation: isolate;
     }
 
@@ -324,9 +340,9 @@
       inset: 0;
       z-index: -2;
       background:
-        linear-gradient(90deg, rgba(8, 9, 11, 0.82) 10%, rgba(8, 9, 11, 0.58) 48%, rgba(8, 9, 11, 0.76) 100%),
-        linear-gradient(180deg, rgba(6, 7, 9, 0.28), rgba(6, 7, 9, 0.8)),
-        url("https://images.pexels.com/photos/8817847/pexels-photo-8817847.jpeg?cs=srgb&dl=pexels-ron-lach-8817847.jpg&fm=jpg")
+        linear-gradient(90deg, rgba(8, 9, 11, 0.84) 10%, rgba(8, 9, 11, 0.48) 50%, rgba(8, 9, 11, 0.76) 100%),
+        linear-gradient(180deg, rgba(8, 9, 11, 0.22), rgba(8, 9, 11, 0.78)),
+        url("https://images.pexels.com/photos/15477575/pexels-photo-15477575.jpeg?auto=compress&cs=tinysrgb&w=1800")
         center center / cover no-repeat;
     }
 
@@ -340,166 +356,205 @@
 
     .hero-grid {
       display: grid;
-      grid-template-columns: 1.18fr 0.82fr;
-      gap: clamp(1.4rem, 3vw, 2.4rem);
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: clamp(1.5rem, 3vw, 2.4rem);
       align-items: end;
       width: 100%;
     }
 
     .hero-copy h1 {
+      margin: 1rem 0 1rem;
       font-family: "Manrope", sans-serif;
-      font-size: clamp(3rem, 8vw, 6.3rem);
+      font-size: clamp(3.2rem, 8vw, 6.6rem);
       line-height: 0.92;
-      letter-spacing: -0.055em;
-      margin: 1rem 0 1.1rem;
-      max-width: 10ch;
+      letter-spacing: -0.06em;
+      max-width: 9.6ch;
     }
 
     .hero-copy p {
-      font-size: clamp(1.02rem, 2vw, 1.18rem);
-      line-height: 1.75;
-      color: #d8d2c9;
-      max-width: 56ch;
       margin: 0 0 1.8rem;
+      max-width: 60ch;
+      color: #dbd5cb;
+      font-size: clamp(1.02rem, 2vw, 1.18rem);
+      line-height: 1.78;
     }
 
-    .hero-meta {
+    .hero-notes {
       display: flex;
       flex-wrap: wrap;
       gap: 0.8rem;
       margin-top: 1.6rem;
     }
 
-    .meta-pill {
-      padding: 0.75rem 0.95rem;
+    .note-pill {
+      padding: 0.78rem 0.96rem;
       border-radius: 999px;
-      background: rgba(255, 255, 255, 0.05);
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      color: #e6e0d6;
+      background: rgba(255,255,255,0.055);
+      border: 1px solid rgba(255,255,255,0.11);
+      color: #ece6dc;
       font-size: 0.92rem;
       font-weight: 600;
       backdrop-filter: blur(10px);
     }
 
-    .hero-panel {
-      border: 1px solid rgba(255, 255, 255, 0.12);
-      background:
-        linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.04));
-      box-shadow: var(--shadow);
-      border-radius: var(--radius);
+    .hero-card {
+      border-radius: var(--radius-xl);
       padding: 1.4rem;
+      border: 1px solid rgba(255,255,255,0.12);
+      background: linear-gradient(180deg, rgba(255,255,255,0.085), rgba(255,255,255,0.045));
       backdrop-filter: blur(18px);
+      box-shadow: var(--shadow-xl);
       align-self: center;
     }
 
-    .panel-topline {
+    .hero-card-top {
       display: flex;
-      align-items: center;
       justify-content: space-between;
       gap: 1rem;
-      color: #f3dfc1;
-      font-weight: 700;
-      letter-spacing: 0.03em;
+      align-items: center;
       margin-bottom: 1rem;
     }
 
-    .panel-topline small {
+    .hero-card-top strong {
+      font-size: 1rem;
+      letter-spacing: 0.02em;
+    }
+
+    .hero-card-top span {
       color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0.9rem;
+      margin-bottom: 1rem;
+    }
+
+    .stat-card {
+      padding: 1rem;
+      border-radius: 18px;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.08);
+      min-height: 118px;
+    }
+
+    .stat-card strong {
+      display: block;
+      font-family: "Manrope", sans-serif;
+      font-size: 1.55rem;
+      line-height: 1;
+      letter-spacing: -0.04em;
+      margin-bottom: 0.45rem;
+      color: #fff4e3;
+    }
+
+    .stat-card span {
+      display: block;
+      color: var(--muted);
+      line-height: 1.6;
+      font-size: 0.93rem;
+    }
+
+    .cred-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.65rem;
+      margin-top: 1rem;
+    }
+
+    .cred-tags span {
+      padding: 0.58rem 0.75rem;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.08);
+      color: #ede5d8;
+      font-size: 0.83rem;
       font-weight: 600;
     }
 
-    .mini-grid {
+    .quick-links {
       display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 0.85rem;
-      margin: 1rem 0 1.2rem;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0.7rem;
+      margin-top: 1.2rem;
     }
 
-    .mini-card {
-      border-radius: 18px;
-      padding: 1rem;
-      background: rgba(255, 255, 255, 0.045);
-      border: 1px solid rgba(255, 255, 255, 0.08);
-      min-height: 110px;
-    }
-
-    .mini-card span {
-      display: block;
-      color: #f6dfbf;
-      font-size: 0.78rem;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      margin-bottom: 0.55rem;
-    }
-
-    .mini-card strong {
-      display: block;
-      line-height: 1.35;
-      font-size: 1rem;
-    }
-
-    .hero-note {
-      color: var(--muted);
-      line-height: 1.65;
-      font-size: 0.95rem;
-      margin: 0;
+    .quick-link {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.55rem;
+      padding: 0.9rem 0.8rem;
+      border-radius: 16px;
+      background: rgba(255,255,255,0.055);
+      border: 1px solid rgba(255,255,255,0.08);
+      color: #f5ebdc;
+      font-weight: 700;
+      font-size: 0.93rem;
+      text-align: center;
     }
 
     .trust-strip {
-      padding: 0 0 1rem;
-      margin-top: -2rem;
+      margin-top: -1.5rem;
+      padding-bottom: 1rem;
       position: relative;
       z-index: 2;
     }
 
     .trust-grid {
       display: grid;
-      grid-template-columns: repeat(4, minmax(0, 1fr));
+      grid-template-columns: repeat(4, minmax(0,1fr));
       gap: 1rem;
     }
 
-    .trust-item {
-      padding: 1rem 1.1rem;
-      border-radius: 20px;
-      background: rgba(255, 255, 255, 0.05);
-      border: 1px solid rgba(255, 255, 255, 0.08);
+    .trust-card {
+      border-radius: 22px;
+      padding: 1.1rem 1.1rem 1rem;
+      background: rgba(255,255,255,0.055);
+      border: 1px solid rgba(255,255,255,0.08);
       backdrop-filter: blur(16px);
     }
 
-    .trust-item strong {
+    .trust-card strong {
       display: block;
-      font-size: 1rem;
       margin-bottom: 0.35rem;
+      font-size: 1rem;
     }
 
-    .trust-item span {
+    .trust-card span {
       color: var(--muted);
-      line-height: 1.6;
+      line-height: 1.65;
       font-size: 0.94rem;
     }
 
     .split {
       display: grid;
-      grid-template-columns: 1fr 1.05fr;
+      grid-template-columns: 1fr 1.02fr;
       gap: clamp(1.5rem, 3vw, 2.8rem);
       align-items: center;
     }
 
     .visual-stack {
       display: grid;
-      grid-template-columns: 1.05fr 0.95fr;
-      grid-template-rows: 1fr 0.7fr;
+      grid-template-columns: 1.03fr 0.97fr;
+      grid-template-rows: 1fr 0.75fr;
       gap: 1rem;
-      min-height: 580px;
+      min-height: 600px;
     }
 
     .visual-card {
       position: relative;
-      border-radius: 24px;
       overflow: hidden;
-      border: 1px solid rgba(255, 255, 255, 0.09);
-      box-shadow: var(--shadow);
+      border-radius: 26px;
+      border: 1px solid rgba(255,255,255,0.08);
+      box-shadow: var(--shadow-xl);
       background: #111;
+    }
+
+    .visual-card.tall {
+      grid-row: 1 / span 2;
     }
 
     .visual-card img {
@@ -513,11 +568,7 @@
       content: "";
       position: absolute;
       inset: 0;
-      background: linear-gradient(180deg, transparent 20%, rgba(9, 10, 13, 0.82) 100%);
-    }
-
-    .visual-card.tall {
-      grid-row: 1 / span 2;
+      background: linear-gradient(180deg, transparent 18%, rgba(10,12,15,0.8) 100%);
     }
 
     .visual-label {
@@ -525,24 +576,24 @@
       left: 1rem;
       bottom: 1rem;
       z-index: 1;
-      padding: 0.65rem 0.8rem;
-      border-radius: 14px;
-      background: rgba(8, 9, 11, 0.64);
-      border: 1px solid rgba(255, 255, 255, 0.11);
-      backdrop-filter: blur(12px);
       max-width: calc(100% - 2rem);
+      padding: 0.7rem 0.82rem;
+      border-radius: 16px;
+      background: rgba(10,12,15,0.62);
+      border: 1px solid rgba(255,255,255,0.11);
+      backdrop-filter: blur(12px);
     }
 
     .visual-label strong {
       display: block;
-      font-size: 0.95rem;
       margin-bottom: 0.2rem;
+      font-size: 0.95rem;
     }
 
     .visual-label span {
-      color: #d0cabf;
+      color: #d4ccbf;
+      line-height: 1.5;
       font-size: 0.86rem;
-      line-height: 1.45;
     }
 
     .feature-list {
@@ -555,11 +606,10 @@
       display: grid;
       grid-template-columns: auto 1fr;
       gap: 1rem;
-      align-items: start;
-      padding: 1rem 1rem 1rem 1.05rem;
+      padding: 1rem 1rem 1rem 1.08rem;
       border-radius: 20px;
-      background: rgba(255, 255, 255, 0.04);
-      border: 1px solid rgba(255, 255, 255, 0.08);
+      background: rgba(255,255,255,0.045);
+      border: 1px solid rgba(255,255,255,0.08);
     }
 
     .feature-icon {
@@ -568,193 +618,327 @@
       border-radius: 14px;
       display: grid;
       place-items: center;
-      color: #121417;
+      color: #111316;
+      font-weight: 900;
       background: linear-gradient(135deg, var(--accent-2), var(--accent));
-      font-weight: 800;
-      box-shadow: 0 12px 24px rgba(216, 154, 74, 0.22);
+      box-shadow: 0 10px 24px rgba(214,151,71,0.22);
     }
 
     .feature strong {
       display: block;
-      font-size: 1rem;
       margin-bottom: 0.35rem;
+      font-size: 1rem;
     }
 
     .feature p {
       margin: 0;
       color: var(--muted);
-      line-height: 1.65;
+      line-height: 1.68;
       font-size: 0.96rem;
-    }
-
-    .services-head {
-      display: flex;
-      justify-content: space-between;
-      gap: 2rem;
-      align-items: end;
-      margin-bottom: 2rem;
-    }
-
-    .services-grid {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 1rem;
-    }
-
-    .service-card {
-      position: relative;
-      padding: 1.35rem;
-      border-radius: 24px;
-      overflow: hidden;
-      background:
-        linear-gradient(180deg, rgba(255, 255, 255, 0.07), rgba(255, 255, 255, 0.03));
-      border: 1px solid rgba(255, 255, 255, 0.09);
-      min-height: 260px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      box-shadow: 0 18px 40px rgba(0, 0, 0, 0.18);
-    }
-
-    .service-card::before {
-      content: "";
-      position: absolute;
-      inset: auto -20% -30% auto;
-      width: 180px;
-      height: 180px;
-      background: radial-gradient(circle, rgba(216, 154, 74, 0.18), transparent 70%);
-      pointer-events: none;
-    }
-
-    .service-card .tag {
-      display: inline-flex;
-      width: fit-content;
-      padding: 0.42rem 0.62rem;
-      border-radius: 999px;
-      background: rgba(255, 255, 255, 0.06);
-      border: 1px solid rgba(255, 255, 255, 0.08);
-      color: #f2dec3;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      font-size: 0.73rem;
-      font-weight: 700;
-    }
-
-    .service-card h3 {
-      margin: 1.15rem 0 0.7rem;
-      font-family: "Manrope", sans-serif;
-      font-size: 1.5rem;
-      letter-spacing: -0.03em;
-    }
-
-    .service-card p {
-      margin: 0;
-      color: var(--muted);
-      line-height: 1.7;
-      font-size: 0.96rem;
-    }
-
-    .service-card ul {
-      list-style: none;
-      padding: 0;
-      margin: 1.2rem 0 0;
-      display: grid;
-      gap: 0.7rem;
-    }
-
-    .service-card li {
-      color: #ece7de;
-      position: relative;
-      padding-left: 1rem;
-      font-size: 0.94rem;
-    }
-
-    .service-card li::before {
-      content: "";
-      width: 0.42rem;
-      height: 0.42rem;
-      border-radius: 50%;
-      background: linear-gradient(135deg, var(--accent-2), var(--accent));
-      position: absolute;
-      left: 0;
-      top: 0.45rem;
     }
 
     .band {
       margin-top: 2rem;
-      padding: 1.15rem 1.2rem;
+      padding: 1.1rem 1.2rem;
       border-radius: 22px;
-      background: linear-gradient(90deg, rgba(216, 154, 74, 0.12), rgba(255, 255, 255, 0.04));
-      border: 1px solid rgba(216, 154, 74, 0.16);
+      background: linear-gradient(90deg, rgba(214,151,71,0.12), rgba(255,255,255,0.04));
+      border: 1px solid rgba(214,151,71,0.16);
+      color: #f4e6d0;
+      line-height: 1.7;
+    }
+
+    .cards-head {
       display: flex;
-      flex-wrap: wrap;
-      gap: 0.8rem 1.4rem;
-      align-items: center;
+      justify-content: space-between;
+      align-items: end;
+      gap: 2rem;
+      margin-bottom: 2rem;
     }
 
-    .band strong {
-      font-size: 1rem;
-    }
-
-    .band span {
-      color: var(--muted);
-    }
-
-    .process-grid {
+    .cards-grid {
       display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
+      grid-template-columns: repeat(3, minmax(0,1fr));
+      gap: 1rem;
+    }
+
+    .card {
+      position: relative;
+      padding: 1.35rem;
+      border-radius: 24px;
+      background:
+        linear-gradient(180deg, rgba(255,255,255,0.075), rgba(255,255,255,0.035));
+      border: 1px solid rgba(255,255,255,0.09);
+      overflow: hidden;
+      min-height: 260px;
+      box-shadow: var(--shadow-lg);
+    }
+
+    .card::before {
+      content: "";
+      position: absolute;
+      inset: auto -18% -25% auto;
+      width: 180px;
+      height: 180px;
+      background: radial-gradient(circle, rgba(214,151,71,0.18), transparent 70%);
+      pointer-events: none;
+    }
+
+    .card .tag {
+      display: inline-flex;
+      width: fit-content;
+      padding: 0.42rem 0.65rem;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.09);
+      color: #f2dec2;
+      font-size: 0.74rem;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .card h3 {
+      margin: 1rem 0 0.7rem;
+      font-family: "Manrope", sans-serif;
+      font-size: 1.48rem;
+      line-height: 1.06;
+      letter-spacing: -0.03em;
+    }
+
+    .card p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.72;
+      font-size: 0.96rem;
+    }
+
+    .card ul {
+      list-style: none;
+      padding: 0;
+      margin: 1.1rem 0 0;
+      display: grid;
+      gap: 0.7rem;
+    }
+
+    .card li {
+      position: relative;
+      padding-left: 1rem;
+      color: #eee7dc;
+      font-size: 0.94rem;
+      line-height: 1.5;
+    }
+
+    .card li::before {
+      content: "";
+      width: 0.42rem;
+      height: 0.42rem;
+      border-radius: 50%;
+      position: absolute;
+      left: 0;
+      top: 0.48rem;
+      background: linear-gradient(135deg, var(--accent-2), var(--accent));
+    }
+
+    .mosaic {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr 0.85fr;
       gap: 1rem;
       margin-top: 2rem;
     }
 
-    .process-card {
+    .mosaic-card {
       position: relative;
-      padding: 1.3rem;
-      border-radius: 24px;
-      background: rgba(255, 255, 255, 0.045);
-      border: 1px solid rgba(255, 255, 255, 0.08);
+      min-height: 380px;
+      border-radius: 28px;
+      overflow: hidden;
+      border: 1px solid rgba(255,255,255,0.09);
+      box-shadow: var(--shadow-xl);
+      background: #111;
     }
 
-    .process-num {
-      display: inline-grid;
-      place-items: center;
+    .mosaic-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .mosaic-card::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, transparent 20%, rgba(8,10,13,0.84) 100%);
+    }
+
+    .mosaic-copy {
+      position: absolute;
+      left: 1rem;
+      right: 1rem;
+      bottom: 1rem;
+      z-index: 1;
+      padding: 0.9rem;
+      border-radius: 18px;
+      background: rgba(8,10,13,0.58);
+      border: 1px solid rgba(255,255,255,0.11);
+      backdrop-filter: blur(12px);
+    }
+
+    .mosaic-copy strong {
+      display: block;
+      margin-bottom: 0.25rem;
+      font-size: 1rem;
+    }
+
+    .mosaic-copy span {
+      display: block;
+      color: #d3cabd;
+      line-height: 1.58;
+      font-size: 0.9rem;
+    }
+
+    .cert-grid {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0,1fr));
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+
+    .cert-card {
+      padding: 1.15rem;
+      border-radius: 22px;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.08);
+      text-align: left;
+    }
+
+    .cert-card .badge {
       width: 44px;
       height: 44px;
       border-radius: 14px;
-      margin-bottom: 1rem;
-      color: #111316;
-      font-weight: 800;
+      display: grid;
+      place-items: center;
+      margin-bottom: 0.9rem;
+      color: #101216;
+      font-weight: 900;
       background: linear-gradient(135deg, var(--accent-2), var(--accent));
     }
 
-    .process-card h3 {
-      margin: 0 0 0.65rem;
-      font-size: 1.2rem;
-      font-family: "Manrope", sans-serif;
-      letter-spacing: -0.02em;
+    .cert-card strong {
+      display: block;
+      margin-bottom: 0.35rem;
+      font-size: 1rem;
     }
 
-    .process-card p {
+    .cert-card span {
+      display: block;
+      color: var(--muted);
+      line-height: 1.65;
+      font-size: 0.92rem;
+    }
+
+    .callout {
+      margin-top: 2rem;
+      border-radius: 28px;
+      padding: 1.35rem;
+      background:
+        linear-gradient(135deg, rgba(255,255,255,0.06), rgba(214,151,71,0.08));
+      border: 1px solid rgba(255,255,255,0.1);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .callout-grid {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 1rem;
+      align-items: center;
+    }
+
+    .callout h3 {
+      margin: 0 0 0.45rem;
+      font-family: "Manrope", sans-serif;
+      font-size: 1.4rem;
+      letter-spacing: -0.03em;
+    }
+
+    .callout p {
       margin: 0;
       color: var(--muted);
-      line-height: 1.7;
+      line-height: 1.72;
+      max-width: 68ch;
+    }
+
+    .faq-grid {
+      display: grid;
+      gap: 1rem;
+      margin-top: 2rem;
+    }
+
+    .faq-item {
+      border-radius: 22px;
+      border: 1px solid rgba(255,255,255,0.08);
+      background: rgba(255,255,255,0.045);
+      overflow: hidden;
+    }
+
+    .faq-question {
+      width: 100%;
+      border: none;
+      background: transparent;
+      color: var(--text);
+      text-align: left;
+      padding: 1.15rem 1.2rem;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+      align-items: center;
+      font-weight: 700;
+      font-size: 1rem;
+    }
+
+    .faq-question span:last-child {
+      flex-shrink: 0;
+      width: 32px;
+      height: 32px;
+      display: grid;
+      place-items: center;
+      border-radius: 10px;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.08);
+      transition: transform 0.2s ease;
+    }
+
+    .faq-item.open .faq-question span:last-child {
+      transform: rotate(45deg);
+    }
+
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.28s ease;
+    }
+
+    .faq-answer p {
+      margin: 0;
+      padding: 0 1.2rem 1.15rem;
+      color: var(--muted);
+      line-height: 1.72;
     }
 
     .contact-shell {
       display: grid;
-      grid-template-columns: 0.95fr 1.05fr;
+      grid-template-columns: 0.92fr 1.08fr;
       gap: 1rem;
       align-items: stretch;
     }
 
     .contact-panel,
     .form-panel {
-      border-radius: 28px;
+      border-radius: 30px;
       padding: 1.35rem;
       background:
-        linear-gradient(180deg, rgba(255, 255, 255, 0.07), rgba(255, 255, 255, 0.04));
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      box-shadow: var(--shadow);
+        linear-gradient(180deg, rgba(255,255,255,0.075), rgba(255,255,255,0.04));
+      border: 1px solid rgba(255,255,255,0.1);
+      box-shadow: var(--shadow-xl);
     }
 
     .contact-stack {
@@ -764,17 +948,25 @@
     }
 
     .contact-item {
+      display: block;
       padding: 1rem;
       border-radius: 20px;
-      background: rgba(255, 255, 255, 0.045);
-      border: 1px solid rgba(255, 255, 255, 0.08);
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.08);
+      transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+    }
+
+    .contact-item:hover {
+      transform: translateY(-2px);
+      border-color: rgba(214,151,71,0.28);
+      background: rgba(255,255,255,0.065);
     }
 
     .contact-label {
       display: block;
-      color: #f1ddb9;
+      color: #f2dec2;
       font-size: 0.78rem;
-      font-weight: 700;
+      font-weight: 800;
       letter-spacing: 0.12em;
       text-transform: uppercase;
       margin-bottom: 0.5rem;
@@ -782,28 +974,27 @@
 
     .contact-item strong {
       display: block;
-      font-size: 1.15rem;
-      margin-bottom: 0.3rem;
+      margin-bottom: 0.25rem;
+      font-size: 1.14rem;
     }
 
     .contact-item span {
-      display: block;
       color: var(--muted);
-      line-height: 1.6;
+      line-height: 1.62;
       font-size: 0.95rem;
     }
 
     .form-panel h3 {
       margin: 0 0 0.4rem;
-      font-size: 1.4rem;
       font-family: "Manrope", sans-serif;
+      font-size: 1.45rem;
       letter-spacing: -0.03em;
     }
 
     .form-panel > p {
-      margin: 0 0 1.15rem;
+      margin: 0 0 1.2rem;
       color: var(--muted);
-      line-height: 1.7;
+      line-height: 1.72;
     }
 
     .quote-form {
@@ -813,13 +1004,13 @@
 
     .form-grid {
       display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
+      grid-template-columns: repeat(2, minmax(0,1fr));
       gap: 0.95rem;
     }
 
     .field {
       display: grid;
-      gap: 0.45rem;
+      gap: 0.46rem;
     }
 
     .field label {
@@ -832,21 +1023,13 @@
     .field textarea,
     .field select {
       width: 100%;
-      border-radius: 16px;
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      background: rgba(255, 255, 255, 0.045);
-      color: var(--text);
       padding: 0.95rem 1rem;
+      border-radius: 16px;
+      border: 1px solid rgba(255,255,255,0.1);
+      background: rgba(255,255,255,0.045);
+      color: var(--text);
       outline: none;
       transition: border-color 0.2s ease, background 0.2s ease, transform 0.2s ease;
-    }
-
-    .field input:focus,
-    .field textarea:focus,
-    .field select:focus {
-      border-color: rgba(255, 191, 114, 0.55);
-      background: rgba(255, 255, 255, 0.065);
-      transform: translateY(-1px);
     }
 
     .field textarea {
@@ -854,22 +1037,60 @@
       resize: vertical;
     }
 
+    .field input:focus,
+    .field textarea:focus,
+    .field select:focus {
+      border-color: rgba(242,193,126,0.5);
+      background: rgba(255,255,255,0.065);
+      transform: translateY(-1px);
+    }
+
     .status {
       min-height: 1.3rem;
-      color: #e8d8bf;
+      color: #f1debe;
       font-size: 0.92rem;
-      line-height: 1.5;
+      line-height: 1.58;
+    }
+
+    .result-box {
+      margin-top: 0.2rem;
+      padding: 1rem;
+      border-radius: 20px;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.08);
+      display: none;
+    }
+
+    .result-box.show {
+      display: block;
+    }
+
+    .result-box strong {
+      display: block;
+      margin-bottom: 0.55rem;
+      font-size: 1rem;
+    }
+
+    .result-box pre {
+      margin: 0 0 1rem;
+      white-space: pre-wrap;
+      word-break: break-word;
+      color: #e8e1d6;
+      line-height: 1.7;
+      font-family: inherit;
+      font-size: 0.95rem;
     }
 
     .tiny-note {
       color: var(--muted);
-      font-size: 0.86rem;
       line-height: 1.65;
+      font-size: 0.86rem;
+      margin: 0;
     }
 
     .footer {
-      padding: 2rem 0 6rem;
-      color: #a9a49a;
+      padding: 2.2rem 0 6.5rem;
+      color: #a8a298;
     }
 
     .footer-shell {
@@ -879,39 +1100,83 @@
       gap: 1rem;
       align-items: center;
       padding-top: 1.25rem;
-      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      border-top: 1px solid rgba(255,255,255,0.08);
     }
 
     .footer-links {
       display: flex;
       flex-wrap: wrap;
       gap: 1rem;
+      align-items: center;
     }
 
     .footer-links a {
-      color: #d3cec5;
+      color: #d4cdc2;
+    }
+
+    .egg {
+      position: relative;
+      width: 34px;
+      height: 34px;
+      border-radius: 12px;
+      display: inline-grid;
+      place-items: center;
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+      color: #ecd2aa;
+      cursor: default;
+    }
+
+    .egg svg {
+      width: 16px;
+      height: 16px;
+    }
+
+    .egg .tooltip {
+      position: absolute;
+      right: 0;
+      bottom: calc(100% + 10px);
+      min-width: 240px;
+      padding: 0.75rem 0.85rem;
+      border-radius: 14px;
+      background: rgba(11,13,16,0.96);
+      border: 1px solid rgba(255,255,255,0.09);
+      box-shadow: var(--shadow-lg);
+      color: #e9e0d3;
+      font-size: 0.84rem;
+      line-height: 1.55;
+      opacity: 0;
+      transform: translateY(6px);
+      pointer-events: none;
+      transition: 0.2s ease;
+    }
+
+    .egg:hover .tooltip,
+    .egg:focus-within .tooltip {
+      opacity: 1;
+      transform: translateY(0);
     }
 
     .mobile-cta {
       position: fixed;
       inset: auto 0 0 0;
-      z-index: 90;
+      z-index: 100;
       display: none;
       padding: 0.8rem 0.9rem calc(0.8rem + env(safe-area-inset-bottom));
       background:
-        linear-gradient(180deg, rgba(9, 11, 13, 0), rgba(9, 11, 13, 0.88) 28%, rgba(9, 11, 13, 0.96));
+        linear-gradient(180deg, rgba(8,10,13,0), rgba(8,10,13,0.88) 30%, rgba(8,10,13,0.96));
       backdrop-filter: blur(14px);
     }
 
     .mobile-cta .cta-row {
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 0.8rem;
+      grid-template-columns: repeat(3, minmax(0,1fr));
+      gap: 0.75rem;
     }
 
     [data-reveal] {
       opacity: 0;
-      transform: translateY(24px);
+      transform: translateY(26px);
       transition: opacity 0.7s ease, transform 0.7s ease;
     }
 
@@ -921,43 +1186,49 @@
     }
 
     #home,
-    #services,
-    #standards,
-    #process,
+    #about,
+    #experience,
+    #credentials,
+    #faq,
     #contact {
-      scroll-margin-top: calc(var(--header-h) + 18px);
+      scroll-margin-top: calc(var(--header-h) + 20px);
     }
 
-    @media (max-width: 1080px) {
+    @media (max-width: 1100px) {
       .hero-grid,
       .split,
-      .contact-shell {
+      .contact-shell,
+      .callout-grid {
         grid-template-columns: 1fr;
       }
 
-      .services-grid,
-      .process-grid,
-      .trust-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
+      .cards-grid,
+      .trust-grid,
+      .cert-grid {
+        grid-template-columns: repeat(2, minmax(0,1fr));
       }
 
-      .services-head {
+      .mosaic {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .mosaic-card:first-child {
+        grid-column: 1 / -1;
+      }
+
+      .cards-head {
         flex-direction: column;
         align-items: start;
       }
-
-      .hero-panel {
-        max-width: 760px;
-      }
     }
 
-    @media (max-width: 820px) {
+    @media (max-width: 860px) {
       .menu-toggle {
         display: inline-grid;
         place-items: center;
       }
 
-      .header-actions > .desktop-only {
+      .header-actions .desktop-only {
         display: none;
       }
 
@@ -970,9 +1241,9 @@
         gap: 0.2rem;
         padding: 0.7rem;
         border-radius: 22px;
-        background: rgba(10, 12, 15, 0.95);
-        border: 1px solid rgba(255, 255, 255, 0.08);
-        box-shadow: var(--shadow);
+        background: rgba(9,11,13,0.96);
+        border: 1px solid rgba(255,255,255,0.08);
+        box-shadow: var(--shadow-xl);
         opacity: 0;
         pointer-events: none;
         transform: translateY(-8px);
@@ -985,7 +1256,7 @@
       }
 
       .nav-links a:hover {
-        background: rgba(255, 255, 255, 0.04);
+        background: rgba(255,255,255,0.04);
       }
 
       .site-header.menu-open .nav-links {
@@ -995,11 +1266,11 @@
       }
 
       .visual-stack {
-        min-height: 420px;
+        min-height: 460px;
       }
 
-      .hero-copy h1 {
-        max-width: 11ch;
+      .quick-links {
+        grid-template-columns: 1fr;
       }
     }
 
@@ -1012,18 +1283,16 @@
         padding-bottom: 2.5rem;
       }
 
-      .mini-grid,
+      .stats-grid,
       .form-grid,
-      .services-grid,
-      .process-grid,
-      .trust-grid {
+      .cards-grid,
+      .trust-grid,
+      .cert-grid,
+      .mosaic {
         grid-template-columns: 1fr;
       }
 
-      .btn-row {
-        width: 100%;
-      }
-
+      .btn-row,
       .btn-row .btn {
         width: 100%;
       }
@@ -1043,27 +1312,102 @@
       }
 
       .footer {
-        padding-bottom: 7.4rem;
+        padding-bottom: 8rem;
+      }
+
+      .hero-copy h1 {
+        max-width: 10ch;
       }
     }
-  </style>
+  
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      border: 0;
+    }
+
+    .version-switch {
+      position: fixed;
+      top: 1rem;
+      right: 1rem;
+      background: rgba(16, 17, 20, 0.85);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: 999px;
+      padding: 0.3rem 0.55rem;
+      z-index: 1200;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+      backdrop-filter: blur(10px);
+    }
+
+    .version-switch select {
+      background: transparent;
+      border: 0;
+      color: #fdf7ef;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      font-size: 0.82rem;
+      padding: 0.35rem 0.6rem;
+      appearance: none;
+    }
+
+    .version-switch select:focus {
+      outline: none;
+      box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.35);
+    }
+
+</style>
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "name": "Striga Site Carpentry",
+      "image": "https://images.pexels.com/photos/15477575/pexels-photo-15477575.jpeg?auto=compress&cs=tinysrgb&w=1600",
+      "telephone": "+1-604-300-5584",
+      "email": "adrianstriga@gmail.com",
+      "areaServed": [
+        "Vancouver",
+        "Richmond",
+        "Burnaby",
+        "Surrey",
+        "Lower Mainland"
+      ],
+      "description": "Rough carpentry, framing, site leadership, and structural support for Lower Mainland residential and multi-family projects."
+    }
+  </script>
 </head>
 <body>
+
+  <div class="version-switch" aria-label="Switch site version">
+    <label class="sr-only" for="versionSelect">Choose layout version</label>
+    <select id="versionSelect">
+      <option value="index.html">Latest premium version</option>
+      <option value="index-gen1.html">Original layout</option>
+    </select>
+  </div>
+
+
   <header class="site-header" id="siteHeader">
     <div class="container nav-shell">
-      <a class="brand" href="#home" aria-label="Striga Rough Carpentry home">
+      <a class="brand" href="#home" aria-label="Striga Site Carpentry home">
         <span class="brand-mark">AS</span>
         <span class="brand-copy">
-          <strong>Striga Rough Carpentry</strong>
-          <span>Adrian Striga &bull; Vancouver &amp; Lower Mainland</span>
+          <strong>Striga Site Carpentry</strong>
+          <span>Adrian Striga • Vancouver &amp; Lower Mainland</span>
         </span>
       </a>
 
-      <nav class="nav-links" id="navLinks" aria-label="Primary">
+      <nav class="nav-links" id="navLinks" aria-label="Primary navigation">
         <a href="#home">Home</a>
-        <a href="#services">Services</a>
-        <a href="#standards">Why Adrian</a>
-        <a href="#process">Process</a>
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#credentials">Credentials</a>
+        <a href="#faq">FAQ</a>
         <a href="#contact">Contact</a>
       </nav>
 
@@ -1072,10 +1416,10 @@
         <button
           class="menu-toggle"
           id="menuToggle"
+          type="button"
           aria-label="Open menu"
           aria-controls="navLinks"
           aria-expanded="false"
-          type="button"
         >
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.1" stroke-linecap="round">
             <path d="M4 7h16"></path>
@@ -1094,63 +1438,68 @@
       <div class="container">
         <div class="hero-grid">
           <div class="hero-copy" data-reveal>
-            <span class="eyebrow">Rough Carpentry &bull; Framing &bull; Site Support</span>
-            <h1>Solid framing. Clean execution. Premium site presence.</h1>
+            <span class="eyebrow">Rough Carpentry • Framing • Site Leadership</span>
+            <h1>Organized site presence. Strong framing mindset. Premium first impression.</h1>
             <p>
-              Adrian Striga delivers dependable rough carpentry support for residential builds,
-              additions, and renovation work across Vancouver and the Lower Mainland - with a
-              modern, no-drama approach that keeps projects moving.
+              Adrian Striga brings more than 15 years in the field to Lower Mainland construction —
+              from rough carpentry and framing support to lead-hand responsibilities, site coordination,
+              and structural upgrade work. This is the kind of profile built to speak to supers,
+              project managers, workforce partners, and builders who want somebody composed, reliable,
+              and sharp on site.
             </p>
 
             <div class="btn-row">
               <a class="btn btn-primary" href="tel:+16043005584">Call Adrian</a>
-              <a class="btn btn-secondary" href="#contact">Request a Quote</a>
-              <a
-                class="btn btn-ghost"
-                href="https://ca.linkedin.com/in/adrian-striga-17b09b205"
-                target="_blank"
-                rel="noreferrer"
-              >
-                View LinkedIn
-              </a>
+              <a class="btn btn-secondary" href="sms:+16043005584">Text for a Quote</a>
+              <a class="btn btn-ghost" href="mailto:adrianstriga@gmail.com">Email Adrian</a>
             </div>
 
-            <div class="hero-meta">
-              <span class="meta-pill">Vancouver &amp; Lower Mainland</span>
-              <span class="meta-pill">Residential framing focus</span>
-              <span class="meta-pill">Additions, renos, crew support</span>
+            <div class="hero-notes">
+              <span class="note-pill">15+ years in the field</span>
+              <span class="note-pill">Richmond low-rise experience</span>
+              <span class="note-pill">Lead-hand &amp; site-ready</span>
+              <span class="note-pill">Vancouver &amp; Lower Mainland</span>
             </div>
           </div>
 
-          <aside class="hero-panel" data-reveal>
-            <div class="panel-topline">
-              <span>Available for</span>
-              <small>Simple one-call contact</small>
+          <aside class="hero-card" data-reveal>
+            <div class="hero-card-top">
+              <strong>Built for direct hiring</strong>
+              <span>No fluff, just clear value</span>
             </div>
 
-            <div class="mini-grid">
-              <div class="mini-card">
-                <span>Framing</span>
-                <strong>Walls, floors, roof structures, and rough layout work</strong>
+            <div class="stats-grid">
+              <div class="stat-card">
+                <strong>15+</strong>
+                <span>Years working across active sites, crews, framing scopes, and structural work.</span>
               </div>
-              <div class="mini-card">
-                <span>Renovations</span>
-                <strong>Additions, reframing, backing, blocking, and structural prep</strong>
+              <div class="stat-card">
+                <strong>6-storey</strong>
+                <span>Low-rise and multi-family jobsite experience around Richmond and nearby municipalities.</span>
               </div>
-              <div class="mini-card">
-                <span>Builders</span>
-                <strong>Reliable site support for GCs, crews, and active projects</strong>
+              <div class="stat-card">
+                <strong>Lead-hand</strong>
+                <span>Comfortable helping keep crews organized, standards consistent, and sites moving.</span>
               </div>
-              <div class="mini-card">
-                <span>Homeowners</span>
-                <strong>Clear communication for smaller framing and carpentry scopes</strong>
+              <div class="stat-card">
+                <strong>Ready</strong>
+                <span>Phone, text, email, and a quote form that generates a message instantly.</span>
               </div>
             </div>
 
-            <p class="hero-note">
-              Need a carpenter who shows up ready, works clean, and helps keep the job moving?
-              This page is built to feel premium, straightforward, and easy to convert.
-            </p>
+            <div class="cred-tags">
+              <span>WHMIS</span>
+              <span>Fall Protection</span>
+              <span>First Aid Level 1</span>
+              <span>Boom/Lift Tickets</span>
+              <span>Class 5 Licence</span>
+            </div>
+
+            <div class="quick-links">
+              <a class="quick-link" href="tel:+16043005584">Call</a>
+              <a class="quick-link" href="sms:+16043005584">Text</a>
+              <a class="quick-link" href="mailto:adrianstriga@gmail.com">Email</a>
+            </div>
           </aside>
         </div>
       </div>
@@ -1159,81 +1508,82 @@
     <section class="trust-strip">
       <div class="container">
         <div class="trust-grid" data-reveal>
-          <div class="trust-item">
-            <strong>Reliable scheduling</strong>
-            <span>Clear availability and fast contact without extra friction.</span>
+          <div class="trust-card">
+            <strong>Composed on site</strong>
+            <span>Professional communication, clean presence, and the kind of steady tone crews respond to.</span>
           </div>
-          <div class="trust-item">
-            <strong>Clean site mindset</strong>
-            <span>Organized, professional, and easy to work alongside on active builds.</span>
+          <div class="trust-card">
+            <strong>Knows the flow</strong>
+            <span>Comfortable supporting superintendents, reading the room, and helping keep priorities aligned.</span>
           </div>
-          <div class="trust-item">
-            <strong>Structural focus</strong>
-            <span>Rough carpentry work centered on sound framing and build readiness.</span>
+          <div class="trust-card">
+            <strong>Builder-facing profile</strong>
+            <span>Written to resonate with the multi-family and workforce standards common across the Lower Mainland.</span>
           </div>
-          <div class="trust-item">
-            <strong>Modern presentation</strong>
-            <span>A sleek single-page site designed to feel polished and premium.</span>
+          <div class="trust-card">
+            <strong>Fast quote path</strong>
+            <span>Direct call, text, email, and a no-backend form that builds a request in seconds.</span>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="section" id="standards">
+    <section class="section" id="about">
       <div class="container split">
         <div class="visual-stack" data-reveal>
           <figure class="visual-card tall">
             <img
-              src="https://images.pexels.com/photos/4642437/pexels-photo-4642437.jpeg?cs=srgb&dl=pexels-brett-rogers-1898640-4642437.jpg&fm=jpg"
-              alt="Interior house framing under construction"
+              src="https://images.pexels.com/photos/8830259/pexels-photo-8830259.jpeg?auto=compress&cs=tinysrgb&w=1400"
+              alt="Interior framing and scaffolding in a house under construction"
             />
             <figcaption class="visual-label">
-              <strong>Built for real job sites</strong>
-              <span>Framing support that fits new builds, interior restructuring, and active renovation work.</span>
+              <strong>Real site depth</strong>
+              <span>Rough carpentry, framing flow, structural awareness, and the judgment that comes with time in the field.</span>
             </figcaption>
           </figure>
 
           <figure class="visual-card">
             <img
-              src="https://images.pexels.com/photos/8817839/pexels-photo-8817839.jpeg?cs=srgb&dl=pexels-ron-lach-8817839.jpg&fm=jpg"
-              alt="Timber roof framing and beams"
+              src="https://images.pexels.com/photos/34006937/pexels-photo-34006937.jpeg?auto=compress&cs=tinysrgb&w=1200"
+              alt="Carpenter cutting wood on a construction site"
             />
             <figcaption class="visual-label">
-              <strong>Structural detail</strong>
-              <span>Roof and beam framing visuals for a premium construction feel.</span>
+              <strong>Hands-on execution</strong>
+              <span>Not just site talk — real production mindset and practical trade habits.</span>
             </figcaption>
           </figure>
 
           <figure class="visual-card">
             <img
-              src="https://images.pexels.com/photos/8817838/pexels-photo-8817838.jpeg?cs=srgb&dl=pexels-ron-lach-8817838.jpg&fm=jpg"
-              alt="Lumber staged on construction site"
+              src="https://images.pexels.com/photos/20473548/pexels-photo-20473548.jpeg?auto=compress&cs=tinysrgb&w=1200"
+              alt="Apartment buildings under construction with scaffolding"
             />
             <figcaption class="visual-label">
-              <strong>Ready-to-build energy</strong>
-              <span>Clean materials, sharp visuals, and a site-first brand tone.</span>
+              <strong>Lower Mainland fit</strong>
+              <span>Positioned for the look and expectations of multi-family and residential builder work.</span>
             </figcaption>
           </figure>
         </div>
 
         <div data-reveal>
-          <span class="eyebrow">Why Adrian</span>
-          <h2 class="section-title">A better look for a hands-on trade.</h2>
+          <span class="eyebrow">About Adrian</span>
+          <h2 class="section-title">A better kind of trade profile.</h2>
           <p class="section-copy">
-            Most small trade sites feel dated. This one is intentionally cleaner, darker, and more
-            upscale so Adrian looks established from the first click. The messaging leans into the
-            same dependable, workforce-forward tone that construction clients respond to, but the
-            copy and layout are fully original.
+            Adrian is being positioned here as more than a pair of hands. The site frames him as a
+            calm, articulate, organized rough carpenter who understands active jobsites, works well with
+            site leadership, and carries himself like somebody who makes the day smoother rather than
+            louder. That matters when the audience is a superintendent, general contractor, labour partner,
+            or builder deciding who belongs on a project.
           </p>
 
           <div class="feature-list">
             <div class="feature">
               <div class="feature-icon">01</div>
               <div>
-                <strong>Confident first impression</strong>
+                <strong>Lead-hand presence</strong>
                 <p>
-                  Premium layout, strong contrast, and sharp imagery help the business feel bigger
-                  and more established without overcomplicating the page.
+                  Trusted to help hold standards, support site direction, and keep crews pointed at the
+                  work that actually moves the project forward.
                 </p>
               </div>
             </div>
@@ -1241,10 +1591,10 @@
             <div class="feature">
               <div class="feature-icon">02</div>
               <div>
-                <strong>Simple contact path</strong>
+                <strong>Strong Lower Mainland relevance</strong>
                 <p>
-                  Call, text, LinkedIn, and a quick quote form all point toward a fast response,
-                  which is exactly what service businesses need.
+                  The narrative highlights multi-family low-rise work, Richmond-area familiarity, and
+                  the kind of resume points that speak well to local builders and workforce teams.
                 </p>
               </div>
             </div>
@@ -1252,124 +1602,247 @@
             <div class="feature">
               <div class="feature-icon">03</div>
               <div>
-                <strong>Built for edits later</strong>
+                <strong>Built to convert</strong>
                 <p>
-                  Swap in project photos, a logo, testimonials, or licensing details later without
-                  needing to rebuild the structure.
+                  Every major section keeps the path simple: understand the value quickly, confirm the
+                  credentials, and contact Adrian directly for the next scope.
                 </p>
               </div>
             </div>
           </div>
+
+          <div class="band">
+            The tone here is deliberate: premium, site-literate, and composed — the kind of presentation
+            that feels at home in conversations around framing crews, structural work, low-rise projects,
+            and organized jobsite support.
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="section" id="services">
+    <section class="section" id="experience">
       <div class="container">
-        <div class="services-head" data-reveal>
+        <div class="cards-head" data-reveal>
           <div>
-            <span class="eyebrow">Services</span>
-            <h2 class="section-title">Rough carpentry services with a polished front end.</h2>
+            <span class="eyebrow">Experience</span>
+            <h2 class="section-title">Grounded in the right kinds of work.</h2>
           </div>
           <p class="section-copy">
-            The service cards below keep the offer simple and believable while still covering the
-            kinds of framing-related work that residential builders and homeowners typically look for.
+            This section pushes the strongest points you shared: multi-family low-rise experience,
+            site leadership, and meaningful project exposure that reads well to people hiring for
+            framing-heavy and site-sensitive roles.
           </p>
         </div>
 
-        <div class="services-grid">
-          <article class="service-card" data-reveal>
-            <div>
-              <span class="tag">Core</span>
-              <h3>Wood Framing</h3>
-              <p>
-                Structural framing support for walls, floors, partitions, and roof systems on
-                residential and light renovation projects.
-              </p>
-            </div>
+        <div class="cards-grid">
+          <article class="card" data-reveal>
+            <span class="tag">Multi-family</span>
+            <h3>Richmond low-rise familiarity</h3>
+            <p>
+              Known across the Lower Mainland, particularly around Richmond and surrounding areas,
+              for six-storey low-rise and multi-residential jobsite experience that translates well
+              to active builder environments.
+            </p>
             <ul>
-              <li>New framing and reframing</li>
-              <li>Wall, floor, and roof prep</li>
-              <li>Back framing and layout support</li>
+              <li>6-storey low-rise exposure</li>
+              <li>Richmond and nearby municipalities</li>
+              <li>Strong fit for multi-res crews</li>
             </ul>
           </article>
 
-          <article class="service-card" data-reveal>
-            <div>
-              <span class="tag">Residential</span>
-              <h3>Additions &amp; Renovations</h3>
-              <p>
-                Rough carpentry for additions, reconfigurations, and structural changes that need a
-                clean, site-ready result before finishes begin.
-              </p>
-            </div>
+          <article class="card" data-reveal>
+            <span class="tag">Leadership</span>
+            <h3>Lead-hand and superintendent support</h3>
+            <p>
+              Comfortable acting as a reliable right hand on site: helping manage pace, maintain
+              standards, keep communication clean, and support the superintendent’s priorities in a
+              practical way.
+            </p>
             <ul>
-              <li>Interior structural updates</li>
-              <li>Basement and suite framing prep</li>
-              <li>Renovation rough-in carpentry</li>
+              <li>Crew awareness and coordination</li>
+              <li>Organized site communication</li>
+              <li>Keeps momentum and standards aligned</li>
             </ul>
           </article>
 
-          <article class="service-card" data-reveal>
-            <div>
-              <span class="tag">Flexible</span>
-              <h3>Site Crew Support</h3>
-              <p>
-                Extra framing help for active jobs that need a reliable carpenter who can plug into
-                a build and keep momentum up.
-              </p>
-            </div>
+          <article class="card" data-reveal>
+            <span class="tag">Structural</span>
+            <h3>Historic and seismic upgrade exposure</h3>
+            <p>
+              Profiled with structural and seismic upgrade experience in downtown Vancouver, including
+              heritage-oriented rebuild work such as the Beacon Hotel and other East Hastings legacy
+              properties you wanted reflected.
+            </p>
             <ul>
-              <li>Builder and GC support</li>
-              <li>Punch-list and backing work</li>
-              <li>Fast turnaround site help</li>
+              <li>Structural upgrade framing context</li>
+              <li>Historic rebuild sensitivity</li>
+              <li>Downtown Vancouver project credibility</li>
             </ul>
           </article>
         </div>
 
-        <div class="band" data-reveal>
-          <strong>Positioning line:</strong>
-          <span>For builders, renovators, and homeowners who want dependable rough carpentry without the rough-looking website.</span>
+        <div class="mosaic">
+          <figure class="mosaic-card" data-reveal>
+            <img
+              src="https://images.pexels.com/photos/17410735/pexels-photo-17410735.jpeg?auto=compress&cs=tinysrgb&w=1600"
+              alt="Construction workers building a structure with timber"
+            />
+            <figcaption class="mosaic-copy">
+              <strong>Production value with field realism</strong>
+              <span>Strong visuals keep the site feeling elevated without drifting into fake corporate polish.</span>
+            </figcaption>
+          </figure>
+
+          <figure class="mosaic-card" data-reveal>
+            <img
+              src="https://images.pexels.com/photos/32992819/pexels-photo-32992819.jpeg?auto=compress&cs=tinysrgb&w=1200"
+              alt="Wooden house framing under construction during sunset"
+            />
+            <figcaption class="mosaic-copy">
+              <strong>Framing-first identity</strong>
+              <span>The imagery stays close to wood-frame, crew, and active-site energy.</span>
+            </figcaption>
+          </figure>
+
+          <figure class="mosaic-card" data-reveal>
+            <img
+              src="https://images.pexels.com/photos/29278168/pexels-photo-29278168.jpeg?auto=compress&cs=tinysrgb&w=1200"
+              alt="Unfinished concrete corridor in a building under construction"
+            />
+            <figcaption class="mosaic-copy">
+              <strong>Structural credibility</strong>
+              <span>Moody construction shots help bridge rough carpentry with higher-end presentation.</span>
+            </figcaption>
+          </figure>
         </div>
       </div>
     </section>
 
-    <section class="section" id="process">
+    <section class="section" id="credentials">
       <div class="container">
-        <span class="eyebrow" data-reveal>Process</span>
-        <h2 class="section-title" data-reveal>Simple from first call to site day.</h2>
+        <span class="eyebrow" data-reveal>Credentials</span>
+        <h2 class="section-title" data-reveal>Tickets, safety, mobility, and site readiness.</h2>
         <p class="section-copy" data-reveal>
-          A one-pager works best when the path is obvious. This section keeps it tight: talk scope,
-          confirm fit, get work moving.
+          These are the credentials and practical jobsite points you wanted front and center.
+          They help frame Adrian as somebody who is not only useful in the work, but dependable in
+          the realities of how sites actually run.
         </p>
 
-        <div class="process-grid">
-          <article class="process-card" data-reveal>
-            <div class="process-num">1</div>
-            <h3>Share the scope</h3>
-            <p>
-              Call, text, or use the quick form with project type, location, and timeline so Adrian
-              can understand the work fast.
-            </p>
+        <div class="cert-grid">
+          <article class="cert-card" data-reveal>
+            <div class="badge">W</div>
+            <strong>WHMIS</strong>
+            <span>Safety literacy and hazard awareness for regulated site environments.</span>
           </article>
 
-          <article class="process-card" data-reveal>
-            <div class="process-num">2</div>
-            <h3>Confirm details</h3>
-            <p>
-              Align on the site needs, rough carpentry scope, and schedule window to make sure the
-              job is a fit before anything starts.
-            </p>
+          <article class="cert-card" data-reveal>
+            <div class="badge">F</div>
+            <strong>Fall Protection</strong>
+            <span>Prepared for elevated work conditions with the right safety grounding.</span>
           </article>
 
-          <article class="process-card" data-reveal>
-            <div class="process-num">3</div>
-            <h3>Get it moving</h3>
-            <p>
-              Keep communication direct and the site experience professional so the build can move
-              forward with less friction.
-            </p>
+          <article class="cert-card" data-reveal>
+            <div class="badge">A</div>
+            <strong>First Aid Level 1</strong>
+            <span>Useful on active sites where readiness and responsibility matter.</span>
           </article>
+
+          <article class="cert-card" data-reveal>
+            <div class="badge">L</div>
+            <strong>Boom / Lift Operator</strong>
+            <span>Tickets and practical equipment experience that add real site value.</span>
+          </article>
+
+          <article class="cert-card" data-reveal>
+            <div class="badge">5</div>
+            <strong>Class 5 Licence</strong>
+            <span>Mobile across the Lower Mainland and ready for varied site locations.</span>
+          </article>
+        </div>
+
+        <div class="callout" data-reveal>
+          <div class="callout-grid">
+            <div>
+              <h3>Where Adrian tends to add value fastest</h3>
+              <p>
+                Rough carpentry support, framing awareness, site leadership, clean coordination,
+                practical communication, and being the kind of steady presence that can help a crew,
+                superintendent, or hiring manager feel more in control of the day.
+              </p>
+            </div>
+
+            <div class="btn-row">
+              <a class="btn btn-primary" href="tel:+16043005584">Call Now</a>
+              <a class="btn btn-secondary" href="#contact">Build a Quote Request</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="faq">
+      <div class="container">
+        <span class="eyebrow" data-reveal>FAQ</span>
+        <h2 class="section-title" data-reveal>Clear enough for builders, crews, and direct clients.</h2>
+        <p class="section-copy" data-reveal>
+          A few quick answers make the page feel complete and credible, while staying honest about
+          what Adrian is being positioned for.
+        </p>
+
+        <div class="faq-grid">
+          <div class="faq-item" data-reveal>
+            <button class="faq-question" type="button">
+              <span>What types of jobs is Adrian best suited for?</span>
+              <span>+</span>
+            </button>
+            <div class="faq-answer">
+              <p>
+                Adrian is positioned strongest for rough carpentry, framing support, site coordination,
+                structural upgrade contexts, and builder-facing work where reliability, organization,
+                and site awareness matter as much as the tools.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item" data-reveal>
+            <button class="faq-question" type="button">
+              <span>Can he work with crews and support site leadership?</span>
+              <span>+</span>
+            </button>
+            <div class="faq-answer">
+              <p>
+                Yes. The profile leans into lead-hand experience and superintendent support — helping
+                crews stay pointed at priorities, keeping standards consistent, and communicating in a
+                way that lowers friction instead of adding to it.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item" data-reveal>
+            <button class="faq-question" type="button">
+              <span>What is the fastest way to reach Adrian for a quote?</span>
+              <span>+</span>
+            </button>
+            <div class="faq-answer">
+              <p>
+                Call or text 604 300 5584 for the fastest response. Email works well too, and the form
+                below builds a ready-to-send quote request that can open as either a text or an email.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-item" data-reveal>
+            <button class="faq-question" type="button">
+              <span>Does the site cover certifications and equipment-related readiness?</span>
+              <span>+</span>
+            </button>
+            <div class="faq-answer">
+              <p>
+                It does. WHMIS, Fall Protection, First Aid Level 1, boom/lift tickets, and Class 5
+                mobility are all surfaced clearly so hiring contacts do not have to go looking for them.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -1378,23 +1851,29 @@
       <div class="container contact-shell">
         <div class="contact-panel" data-reveal>
           <span class="eyebrow">Contact</span>
-          <h2 class="section-title">Let's line up the next project.</h2>
+          <h2 class="section-title">Reach Adrian directly.</h2>
           <p class="section-copy">
-            The easiest route is still the best route: call or text Adrian directly. This section
-            keeps that front and center.
+            This part is intentionally simple. No friction, no dead-end inquiry flow — just the direct
+            channels someone needs when they already know they want to talk.
           </p>
 
           <div class="contact-stack">
             <a class="contact-item" href="tel:+16043005584">
               <span class="contact-label">Phone</span>
               <strong>604 300 5584</strong>
-              <span>Tap to call immediately from mobile or desktop.</span>
+              <span>Best option for the fastest quote conversation.</span>
             </a>
 
             <a class="contact-item" href="sms:+16043005584">
-              <span class="contact-label">Text Message</span>
-              <strong>Quick project details by text</strong>
-              <span>Great for sending scope, address, and timeline in one message.</span>
+              <span class="contact-label">Text</span>
+              <strong>Text project scope or timing</strong>
+              <span>Ideal for quick address, scope, and scheduling details.</span>
+            </a>
+
+            <a class="contact-item" href="mailto:adrianstriga@gmail.com">
+              <span class="contact-label">Email</span>
+              <strong>adrianstriga@gmail.com</strong>
+              <span>Use for formal quote requests, introductions, or project notes.</span>
             </a>
 
             <a
@@ -1405,22 +1884,22 @@
             >
               <span class="contact-label">LinkedIn</span>
               <strong>Adrian Striga</strong>
-              <span>Public profile link for an extra credibility touchpoint.</span>
+              <span>Public profile link for an added credibility touchpoint.</span>
             </a>
 
             <div class="contact-item">
               <span class="contact-label">Service Area</span>
-              <strong>Vancouver &amp; Lower Mainland</strong>
-              <span>Positioned for local residential framing, renovations, and build support.</span>
+              <strong>Vancouver, Richmond &amp; Lower Mainland</strong>
+              <span>Positioned for local framing, structural, and builder-facing site support.</span>
             </div>
           </div>
         </div>
 
         <div class="form-panel" data-reveal>
-          <h3>Quick quote text generator</h3>
+          <h3>Build a quote request</h3>
           <p>
-            This form does not need a backend. It builds a clean text message draft and opens the
-            user's texting app to contact Adrian directly.
+            This form does not need a backend. It generates a clean request, copies it when possible,
+            and gives instant buttons to email or text Adrian directly.
           </p>
 
           <form class="quote-form" id="quoteForm">
@@ -1429,10 +1908,20 @@
                 <label for="name">Your name</label>
                 <input id="name" name="name" type="text" placeholder="Name" required />
               </div>
-
               <div class="field">
-                <label for="phone">Your phone</label>
+                <label for="company">Company / client</label>
+                <input id="company" name="company" type="text" placeholder="Company or homeowner" />
+              </div>
+            </div>
+
+            <div class="form-grid">
+              <div class="field">
+                <label for="phone">Phone</label>
                 <input id="phone" name="phone" type="tel" placeholder="Best number" />
+              </div>
+              <div class="field">
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email" placeholder="you@example.com" />
               </div>
             </div>
 
@@ -1441,22 +1930,24 @@
                 <label for="projectType">Project type</label>
                 <select id="projectType" name="projectType" required>
                   <option value="">Select one</option>
-                  <option>Residential framing</option>
-                  <option>Addition / renovation</option>
-                  <option>Site crew support</option>
-                  <option>Other rough carpentry</option>
+                  <option>Rough carpentry</option>
+                  <option>Wood framing</option>
+                  <option>Multi-family site support</option>
+                  <option>Low-rise / residential build</option>
+                  <option>Structural or seismic upgrade support</option>
+                  <option>Other</option>
                 </select>
               </div>
 
               <div class="field">
                 <label for="timeline">Timeline</label>
-                <input id="timeline" name="timeline" type="text" placeholder="ASAP / this month / planning stage" />
+                <input id="timeline" name="timeline" type="text" placeholder="ASAP / next month / planning stage" />
               </div>
             </div>
 
             <div class="field">
               <label for="location">Project location</label>
-              <input id="location" name="location" type="text" placeholder="Vancouver, Burnaby, Surrey..." required />
+              <input id="location" name="location" type="text" placeholder="Richmond, Vancouver, Burnaby..." required />
             </div>
 
             <div class="field">
@@ -1464,20 +1955,31 @@
               <textarea
                 id="details"
                 name="details"
-                placeholder="Briefly describe the work: framing needed, addition size, reno scope, site support, etc."
+                placeholder="Describe the scope: framing, crew support, structural work, low-rise, renovation, timing, and any site notes."
                 required
               ></textarea>
             </div>
 
             <div class="btn-row">
-              <button class="btn btn-primary" type="submit">Create text to Adrian</button>
-              <a class="btn btn-secondary" href="tel:+16043005584">Call instead</a>
+              <button class="btn btn-primary" type="submit">Generate Request</button>
+              <a class="btn btn-secondary" href="tel:+16043005584">Call Instead</a>
             </div>
 
             <div class="status" id="formStatus" aria-live="polite"></div>
+
+            <div class="result-box" id="resultBox">
+              <strong>Ready to send</strong>
+              <pre id="messagePreview"></pre>
+              <div class="btn-row">
+                <a class="btn btn-primary" id="sendEmailBtn" href="mailto:adrianstriga@gmail.com">Email Adrian</a>
+                <a class="btn btn-secondary" id="sendTextBtn" href="sms:+16043005584">Text Adrian</a>
+                <a class="btn btn-ghost" id="copyBtn" href="#">Copy Message</a>
+              </div>
+            </div>
+
             <p class="tiny-note">
-              If text messaging does not open on your device, the message draft will still be copied
-              when possible so it can be pasted manually.
+              The generated request is copied when possible. On some desktop devices, text messaging
+              may not launch, but the message will still be ready to paste manually.
             </p>
           </form>
         </div>
@@ -1488,37 +1990,51 @@
   <footer class="footer">
     <div class="container footer-shell">
       <div>
-        &copy; <span id="year"></span> Striga Rough Carpentry &bull; Adrian Striga
+        © <span id="year"></span> Striga Site Carpentry • Adrian Striga
       </div>
+
       <div class="footer-links">
-        <a href="#services">Services</a>
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
         <a href="#contact">Contact</a>
-        <a href="tel:+16043005584">604 300 5584</a>
+        <a href="mailto:adrianstriga@gmail.com">Email</a>
+        <span class="egg" tabindex="0" aria-label="Tiny hidden joke">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M14 3l7 7-2.5 2.5-7-7L14 3z"></path>
+            <path d="M4 20l5.5-5.5"></path>
+            <path d="M8 9l7 7"></path>
+          </svg>
+          <span class="tooltip">He knows how to walk a site in stilettos. The hammer, obviously.</span>
+        </span>
       </div>
     </div>
   </footer>
 
-  <div class="mobile-cta" aria-hidden="false">
+  <div class="mobile-cta">
     <div class="container cta-row">
-      <a class="btn btn-primary" href="tel:+16043005584">Call Adrian</a>
-      <a class="btn btn-secondary" href="#contact">Get Quote</a>
+      <a class="btn btn-primary" href="tel:+16043005584">Call</a>
+      <a class="btn btn-secondary" href="sms:+16043005584">Text</a>
+      <a class="btn btn-ghost" href="mailto:adrianstriga@gmail.com">Email</a>
     </div>
   </div>
 
   <script>
     const siteHeader = document.getElementById("siteHeader");
     const menuToggle = document.getElementById("menuToggle");
-    const navLinks = document.getElementById("navLinks");
-    const navAnchors = Array.from(document.querySelectorAll('.nav-links a'));
+    const navAnchors = Array.from(document.querySelectorAll(".nav-links a"));
     const quoteForm = document.getElementById("quoteForm");
     const formStatus = document.getElementById("formStatus");
+    const resultBox = document.getElementById("resultBox");
+    const messagePreview = document.getElementById("messagePreview");
+    const sendEmailBtn = document.getElementById("sendEmailBtn");
+    const sendTextBtn = document.getElementById("sendTextBtn");
+    const copyBtn = document.getElementById("copyBtn");
+
+    const ADRIAN_PHONE = "+16043005584";
+    const ADRIAN_EMAIL = "adrianstriga@gmail.com";
 
     function setHeaderState() {
-      if (window.scrollY > 16) {
-        siteHeader.classList.add("scrolled");
-      } else {
-        siteHeader.classList.remove("scrolled");
-      }
+      siteHeader.classList.toggle("scrolled", window.scrollY > 16);
     }
 
     setHeaderState();
@@ -1536,9 +2052,8 @@
       });
     });
 
-    const sectionIds = navAnchors.map((a) => a.getAttribute("href")).filter(Boolean);
-
-    const observerSections = new IntersectionObserver(
+    const sectionIds = navAnchors.map((anchor) => anchor.getAttribute("href")).filter(Boolean);
+    const sectionObserver = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (!entry.isIntersecting) return;
@@ -1553,22 +2068,43 @@
 
     sectionIds.forEach((id) => {
       const section = document.querySelector(id);
-      if (section) observerSections.observe(section);
+      if (section) sectionObserver.observe(section);
     });
 
     const revealItems = document.querySelectorAll("[data-reveal]");
     const revealObserver = new IntersectionObserver(
-      (entries, obs) => {
+      (entries, observer) => {
         entries.forEach((entry) => {
           if (!entry.isIntersecting) return;
           entry.target.classList.add("revealed");
-          obs.unobserve(entry.target);
+          observer.unobserve(entry.target);
         });
       },
-      { threshold: 0.16, rootMargin: "0px 0px -40px 0px" }
+      { threshold: 0.14, rootMargin: "0px 0px -48px 0px" }
     );
 
     revealItems.forEach((item) => revealObserver.observe(item));
+
+    const faqItems = document.querySelectorAll(".faq-item");
+    faqItems.forEach((item) => {
+      const button = item.querySelector(".faq-question");
+      const answer = item.querySelector(".faq-answer");
+
+      button.addEventListener("click", () => {
+        const isOpen = item.classList.contains("open");
+
+        faqItems.forEach((otherItem) => {
+          otherItem.classList.remove("open");
+          const otherAnswer = otherItem.querySelector(".faq-answer");
+          otherAnswer.style.maxHeight = null;
+        });
+
+        if (!isOpen) {
+          item.classList.add("open");
+          answer.style.maxHeight = `${answer.scrollHeight}px`;
+        }
+      });
+    });
 
     document.getElementById("year").textContent = new Date().getFullYear();
 
@@ -1578,9 +2114,7 @@
           await navigator.clipboard.writeText(text);
           return true;
         }
-      } catch (error) {
-        // continue to fallback
-      }
+      } catch (error) {}
 
       try {
         const temp = document.createElement("textarea");
@@ -1590,45 +2124,87 @@
         temp.style.left = "-9999px";
         document.body.appendChild(temp);
         temp.select();
-        const copied = document.execCommand("copy");
+        const success = document.execCommand("copy");
         document.body.removeChild(temp);
-        return copied;
+        return success;
       } catch (error) {
         return false;
       }
     }
 
+    let lastMessage = "";
+
     quoteForm.addEventListener("submit", async (event) => {
       event.preventDefault();
 
-      const formData = new FormData(quoteForm);
-      const name = (formData.get("name") || "").toString().trim();
-      const phone = (formData.get("phone") || "").toString().trim();
-      const projectType = (formData.get("projectType") || "").toString().trim();
-      const timeline = (formData.get("timeline") || "").toString().trim();
-      const location = (formData.get("location") || "").toString().trim();
-      const details = (formData.get("details") || "").toString().trim();
+      const data = new FormData(quoteForm);
+      const name = (data.get("name") || "").toString().trim();
+      const company = (data.get("company") || "").toString().trim();
+      const phone = (data.get("phone") || "").toString().trim();
+      const email = (data.get("email") || "").toString().trim();
+      const projectType = (data.get("projectType") || "").toString().trim();
+      const timeline = (data.get("timeline") || "").toString().trim();
+      const location = (data.get("location") || "").toString().trim();
+      const details = (data.get("details") || "").toString().trim();
+
+      const subject = `Quote Request — ${projectType || "Project Inquiry"}${location ? ` in ${location}` : ""}`;
 
       const lines = [
-        `Hi Adrian, my name is ${name}.`,
-        phone ? `My phone number is ${phone}.` : "",
-        `I'm looking for help with: ${projectType}.`,
-        `Project location: ${location}.`,
-        timeline ? `Timeline: ${timeline}.` : "",
-        `Project details: ${details}`
+        `Hi Adrian,`,
+        ``,
+        `My name is ${name}.`,
+        company ? `Company / client: ${company}` : "",
+        phone ? `Phone: ${phone}` : "",
+        email ? `Email: ${email}` : "",
+        `Project type: ${projectType}`,
+        `Location: ${location}`,
+        timeline ? `Timeline: ${timeline}` : "",
+        `Project details: ${details}`,
+        ``,
+        `Please let me know your availability.`
       ].filter(Boolean);
 
-      const message = lines.join(" ");
+      const message = lines.join("\n");
+      lastMessage = message;
+
+      messagePreview.textContent = message;
+      sendEmailBtn.href = `mailto:${ADRIAN_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(message)}`;
+      sendTextBtn.href = `sms:${ADRIAN_PHONE}?body=${encodeURIComponent(message)}`;
+      resultBox.classList.add("show");
 
       const copied = await copyText(message);
-      const smsUrl = `sms:+16043005584?body=${encodeURIComponent(message)}`;
-
       formStatus.textContent = copied
-        ? "Draft copied. Your texting app should open now."
-        : "Texting app should open now. If not, copy the details manually and call Adrian.";
+        ? "Request generated and copied. You can email or text Adrian using the buttons below."
+        : "Request generated. Use the buttons below to email or text Adrian.";
 
-      window.location.href = smsUrl;
+      resultBox.scrollIntoView({ behavior: "smooth", block: "nearest" });
+    });
+
+    copyBtn.addEventListener("click", async (event) => {
+      event.preventDefault();
+      if (!lastMessage) return;
+
+      const copied = await copyText(lastMessage);
+      formStatus.textContent = copied
+        ? "Message copied."
+        : "Could not copy automatically. Select the message and copy it manually.";
     });
   </script>
+
+  <script>
+    (function () {
+      const versionSelect = document.getElementById("versionSelect");
+      if (!versionSelect) return;
+      const fileName = window.location.pathname.split("/").pop() || "index.html";
+      versionSelect.value = fileName;
+      versionSelect.addEventListener("change", (event) => {
+        const target = event.target.value;
+        if (target) {
+          window.location.href = target;
+        }
+      });
+    })();
+  </script>
+
 </body>
 </html>
